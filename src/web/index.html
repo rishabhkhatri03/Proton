@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Proton</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+        .chat_icon {
+            position: fixed;
+            bottom: 60px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .chat_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: calc(100% - 60px);
+            margin: 0 10px;
+        }
+        #messages {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex-grow: 1;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 40%;
+        }
+        .proton-message {
+            background: #d1e7dd;
+            align-self: flex-start;
+        }
+        .user-message {
+            background: #e7d1d1;
+            align-self: flex-end;
+        }
+        #convForm {
+            display: flex;
+            position: fixed;
+            bottom: 10px;
+            width: calc(100% - 20px);
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        #userInput {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #userInputButton {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        #userInputButton:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="header-wrapper">
+            <p class="awesome">PROTON Welcomes you!</p>
+            <div class="logo">
+                <img src="images/icon.png" width="35" height="33">
+            </div>
+        </div>
+    </header>
+
+    <!-- ChatBot -->
+    <div class="chat_icon">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+    </div>
+
+    <div class="chat_box">
+        <div id="messages">
+            <!-- Message boxes will be added here dynamically -->
+        </div>
+
+        <div id="convForm">
+            <input type="text" id="userInput" placeholder="Type Here">
+            <button id="userInputButton" type="button">▶</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</body>
+</html>
